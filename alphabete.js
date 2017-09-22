@@ -1,5 +1,4 @@
 //alphabete object
-function Alphabete() {
-    
-    
+
+function Alphabete() {   
 }
