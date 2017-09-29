@@ -10,6 +10,7 @@ function setup(){
     for(var j = 0; j < rows;j++){
         for(var i = 0; i < cols; i++){
             var cell = new Cell(i,j);
+            cell.determineLetter();
             grid.push(cell);
         }
     }
@@ -38,14 +39,14 @@ function draw() {
 }
 
 function keyPressed(){
-    if(keyCode === UP_ARROW){
-        if(man.strike >= 8){
-            man.strike += 1;
-            man.endGame();
-        }else {
-        man.strike += 1;
-        }
+// implement binary search but just loop through once to get functionality going.
+    for(var i = 0; i < grid.length;i++){
+        if(keyCode == grid[i].getKey()){
+            grid[i].selected = true;
+            console.log("pressed inside");
+        }   
     }
 }
+
 
 
